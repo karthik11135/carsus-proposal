@@ -4,7 +4,9 @@
 
 #### <u>Project Details</u>   
 Project Title : CARSUS DASHBOARD
+
 Mentors : [Josh Shields](https://github.com/jvshields)
+
 Difficulty : HARD
  
 #### <u>Personal Information</u>   
@@ -80,12 +82,12 @@ I've gone through the entire codebase and gained an understanding of its main co
 My first internship offer was from a fintech company — Capital One, where I worked as a Software Developer Intern for two months. During this time, I improved my Python programming skills, which is the primary language used in TARDIS. I improved the runtime of our codebase by 40%. After my internship, I discovered TARDIS and began exploring its code by studying the documentation and working through the quickstart tutorials. I've gone threw few issues in the codebase and tried to solve a few of them. 
 
 Here are some of my open PRs
-[add test to line info](https://github.com/tardis-sn/tardis/pull/2947)
-[from Simulation test for RPacket Plot](https://github.com/tardis-sn/tardis/pull/2945)
-[Todo: Tests of Composition](https://github.com/tardis-sn/tardis/pull/2944)
-[Todo: Rename tau to tau_event](https://github.com/tardis-sn/tardis/pull/2931)
-[Tests for config validator](https://github.com/tardis-sn/tardis/pull/2926)
-[Todo: Remove ConfigWriterMixin class](https://github.com/tardis-sn/tardis/pull/2926)
-[Regression data for Composition](https://github.com/tardis-sn/tardis-regression-data/pull/44)
+- [add test to line info](https://github.com/tardis-sn/tardis/pull/2947)
+- [from Simulation test for RPacket Plot](https://github.com/tardis-sn/tardis/pull/2945)
+- [Todo: Tests of Composition](https://github.com/tardis-sn/tardis/pull/2944)
+- [Todo: Rename tau to tau_event](https://github.com/tardis-sn/tardis/pull/2931)
+- [Tests for config validator](https://github.com/tardis-sn/tardis/pull/2926)
+- [Todo: Remove ConfigWriterMixin class](https://github.com/tardis-sn/tardis/pull/2926)
+- [Regression data for Composition](https://github.com/tardis-sn/tardis-regression-data/pull/44)
 
 Apart from this, I actively explore new technologies and work on personal projects to enhance my skills.I believe that I am a perfect fit for this project because I've a good grip on the codebase and I understand what happens under the hood. I also believe that I can hit the ground running from day 0. 
