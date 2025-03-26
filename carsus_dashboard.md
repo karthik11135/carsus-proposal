@@ -1,22 +1,22 @@
 <center>GSoC'25 Proposal - TARDIS RT Collaboration</center>
 
-## <center> CARSUS DASHBOARD </center>
+# <center> CARSUS DASHBOARD </center>
 
-#### <u>Project Details</u>   
+### <u>Project Details</u>   
 Project Title : CARSUS DASHBOARD
 
 Mentors : [Josh Shields](https://github.com/jvshields)
 
 Difficulty : HARD
  
-#### <u>Personal Information</u>   
+### <u>Personal Information</u>   
 Name : Karthik
 Email : karthikrk11135@gmail.com
 Github id : karthik11135
 Brief Summary : A senior year college student from NIT Trichy, India. Interned at Capital One where I've worked on a python team. Over the past few months I've developed an interest towards open source and started looking into open source codebases. I like listening to music, window shopping and planning vacations. 
 Resume : [Link to my Resume](https://drive.google.com/file/d/1LTs82Yv-aLM0iVrQHyoPOCQsfxLe_wFC/view?usp=sharing)
 
-#### <u>About the Organisation</u>  
+### <u>About the Organisation</u>  
 TARDIS (Temperature And Radiative Diffusion In Supernovae) is an open-source radiative transfer code that is developed for simulating supernova spectra. At its core, TARDIS helps astrophysicsts understand how exploding stars appear to observers by creating synthetic spectra - essentially predicting what these cosmic explosions would look like through a telescope. Rather than taking days or weeks to simulate a spectrum, TARDIS uses sophisticated approximations  to generate while maintaining physical accuracy.
 
 <u>Core Components of TARDIS</u>
@@ -73,12 +73,14 @@ Link to the github repo : [Solution](https://github.com/karthik11135/carsus-dash
 |---------|---------|
 | ![](./linesfirstobj.png) | ![](./levelsfirstobj.png) |
 
-#### Why I've chosen TARDIS?
+### My Approach
+
+### Why I've chosen TARDIS?
 Over the past few months I wanted to explore open-source contributions. So I started looking for popular repositories on GitHub. That’s when I came across TARDIS.
 
 I've gone through the entire codebase and gained an understanding of its main components. While going through the code, I encountered numerous scientific terms like Monte Carlo Iteration, Plasma State, JBlues etc. I really enjoyed the process of googling these terms and understanding them. The documentation was written in a very clear way. The clarity of explanations in the documentation made it easier to understand the code. These are the two primary things that made me stick to contributing to TARDIS.
 
-#### Why am I the best fit?
+### Why am I the best fit?
 My first internship offer was from a fintech company — Capital One, where I worked as a Software Developer Intern for two months. During this time, I improved my Python programming skills, which is the primary language used in TARDIS. I improved the runtime of our codebase by 40%. After my internship, I discovered TARDIS and began exploring its code by studying the documentation and working through the quickstart tutorials. I've gone threw few issues in the codebase and tried to solve a few of them. 
 
 Here are some of my open PRs
