@@ -1,6 +1,10 @@
 GSoC'25 Proposal - TARDIS RT Collaboration
 
-# CARSUS DASHBOARD
+<!-- <div style="display: flex"> -->
+![gsoc banner](./GSoC-logo-horizontal.svg) 
+<!-- </div> -->
+
+# CARSUS DASHBOARD ![tardis logo](./ttrail.png)
 
 ## Project Details
 
@@ -13,11 +17,11 @@ GSoC'25 Proposal - TARDIS RT Collaboration
 
 ## Personal Information
 
-Name : Karthik
+Name : Karthik Rishinarada
 
 Email : karthikrk11135@gmail.com
 
-LinkedIN: [Karthik Rishinarada](https://www.linkedin.com/in/karthik-rishinarada-a61b39251/)
+LinkedIn: [Karthik Rishinarada](https://www.linkedin.com/in/karthik-rishinarada-a61b39251/)
 
 Github id : [karthik11135](https://github.com/karthik11135)
 
@@ -61,7 +65,7 @@ Carsus enables researchers to:
 
 The traditional way of getting insights from various atomic datasets is to run the scripts of carsus and look at the tables. Astrophysicsts and researchers spend time in creating their custom atomic files, comparing two atomic files etc. This manual process is time-consuming and can slow down research progress.
 
-The Project - CARSUS Dashboard aims to streamline this workflow by providing a web-based application that facilitates numerous use cases. By enabling web access to different datasets, the project reduces the effort required to interact with Carsus, making data analysis faster. Web access to various datasets will lessen the amount of time researchers have to deal with carsus to get insights. Built using Flask and Jinja2, the application offers multiple API endpoints that allow users to request and visualize insights about atomic data.
+The Project - CARSUS Dashboard aims to streamline this workflow by providing a web-based application that facilitates numerous use cases. By enabling web access to different datasets, the project reduces the effort required to interact with Carsus, making data analysis faster. Web access to various datasets will lessen the amount of time researchers have to deal with carsus to get insights. Built using Flask and Jinja2, the application offers multiple API endpoints that allow users to request and visualize insights about atomic data in a nicely formatted way.
 
 Some of the features of the application include:
 
@@ -77,7 +81,7 @@ Some of the features of the application include:
 
 Task : Use Jinja2 to generate an HTML Report that investigates an atomic file. Display top 50 rows of levels and lines dataframes from the atomic file for Silicon
 
-Link to the github repo : [Solution](https://github.com/karthik11135/carsus-dashboard)
+Link to the github repository : [Solution](https://github.com/karthik11135/carsus-dashboard)
 
 <u>Explanation</u> : Custom Atomic file is created using NIST's atomic weights and ionization energies. GFALL Reader is used to get the data of lines and levels for the Silicon atom. TARDISAtomData class is used to create the atom data. This atom data is loaded on the first server load. When the user hits the endpoint (/get_data) the first 50 rows of both lines and levels data is outputted on the screen.
 
@@ -92,7 +96,7 @@ Link to the github repo : [Solution](https://github.com/karthik11135/carsus-dash
 
 ---
 
-## My Approach
+## My Approach towards the project
 
 Tech Stack : Flask, Jinja2 and TailwindCSS for styling
 
@@ -149,7 +153,6 @@ Python API endpoints:
 
 - Comparison tools to analyze differences between datasets.
 
-
 ---
 
 ### Milestones
@@ -165,7 +168,7 @@ Python API endpoints:
 
 ### Why I've chosen TARDIS?
 
-Over the past few months I wanted to explore open-source contributions. So I started looking for popular repositories on GitHub. That’s when I came across TARDIS.
+Over the past few months I wanted to explore open-source contributions. So I started looking for python repositories on GitHub. That’s when I came across TARDIS.
 
 I've gone through the entire codebase and gained an understanding of its main components. While going through the code, I encountered numerous scientific terms like Monte Carlo Iteration, Plasma State, JBlues etc. I really enjoyed the process of googling these terms and understanding them. The documentation was written in a very clear way. The clarity of explanations in the documentation made it easier to understand the code. These are the two primary things that made me stick to contributing to TARDIS.
 
@@ -197,4 +200,5 @@ Apart from this, I actively explore new technologies and work on personal projec
 ---
 
 ### Conclusion
+
 In conclusion, my strong knowledge in Python, experience with open-source contributions, and familiarity with the TARDIS codebase make me a great fit for this project. I'm motivated to develop the CARSUS Dashboard, ensuring it becomes a valuable tool for astrophysicists. While I have exams from May 3rd to May 9th, I will be entirely free afterward and fully committed to executing the project. I look forward to contribute meaningfully to the TARDIS RT Collaboration.
