@@ -1,6 +1,6 @@
 GSoC'25 Proposal - TARDIS RT Collaboration
 
-# CARSUS DASHBOARD 
+# CARSUS DASHBOARD
 
 ## Project Details
 
@@ -97,7 +97,9 @@ Tech Stack : Flask, Jinja2 and TailwindCSS for styling
 On the server side, the default atom data is created using only the default options initially. If the user wants to change the data by incorporating other options in NNDC Reader, CMFGEN etc, specific middleware can be created to facilitate custom atomic data creation. On the backend, various endpoints can be created to serve the atomic files data, compare different atomic datasets and also alter the default atomic dataset by sending specific options.
 
 #### Backend Features
+
 #### 1. Fetching data
+
 Python API endpoints:
 | Endpoint Name | HTTP Method | URL Pattern |
 |------------------------------------|------------|---------------------------------------------------------------|
@@ -109,13 +111,12 @@ Python API endpoints:
 | Retrieve Collisions Data | GET or POST | `/collisions_data?atomic_file_name=&atomic_number=&ion_charge=&min_energy=&max_energy=` |
 | Retrieve Cross Sections Data | GET or POST | `/cross_sections?atomic_file_name=&atomic_number=&ion_charge=&min_energy=` |
 
-
 GET: Retrieves data when a valid atomic_file_name is provided.
 
 POST: Allows creating a custom atomic dataset via middleware when options are passed in the request body.
 
+Example of how the body can look like in a POST request :
 
-Example of how the body can look like in a POST request : 
 ```
 {
   "atom": "H-Zn",
@@ -129,15 +130,14 @@ Example of how the body can look like in a POST request :
 }
 ```
 
-
 #### 2. Comparing Atomic Files
+
 Python API endpoints:
 | Endpoint Name | HTTP Method | URL Pattern | Body |
 |------------------------------------|------------|---------------------|---------------|
-| Fetch key differences | GET  | `/key_diff?atomic_file1=&atomic_file2=&diff_in=linesorlevels` |   `NA` |
+| Fetch key differences | GET | `/key_diff?atomic_file1=&atomic_file2=&diff_in=linesorlevels` | `NA` |
 | Fetch ion differences | POST | `/ion_diff??atomic_file1=&atomic_file2=` | `{key_name: string, ion: string or tuple, rtol: int, simplify_output=bool, return_summary=bool, style=bool, style_axis=int}` |
 | Fetch the plot for ion differences | POST | `/plot_ion_diff?atomic_file_name1=&atomic_file_name2=` | `{key_name: string, ion: string or tuple, column: string}` |
-
 
 #### Frontend Features
 
@@ -151,11 +151,14 @@ Python API endpoints:
 
 ### Milestones
 
+| Sno | Milestone                                  | Focus Area                                                                                | Deliverables                                                                                                                                                                                  |
+| --- | ------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Backend Setup                              | Implementing basic API endpoints for fetching atomic data and writing relevant test cases | <ul><li>Working Flask app with GET endpoints (/get_lines_data, /get_collisions_data, /get_levels_data)</li><li>A simple frontend page using Jinja2 templates</li></ul>                        |
+| 2   | Data Fetching and setting up POST requests | Middleware setup for custom data creation and frontend features incorporated              | <ul><li>Fully functional data-fetching API with support for custom atomic data creation</li><li>Frontend with forms and data filtering</li><li>Initial test suite for API endpoints</li></ul> |
+| 3   | Comparing Atomic Datasets                  | Comparison APIs setup, visualization                                                      | <ul><li>Working comparison APIs with visualization</li><li>Frontend for comparing datasets</li><li>Tests for endpoints</li></ul>                                                              |
+| 4   | Documentation and Testing                  | Docs, tests, final deployment                                                             | <ul><li>Documentation of entire code workflow </li><li>Full test coverage</li><li>Deployable project</li></ul>                                                                                |
+
 ---
-
-
-
-
 
 ### Why I've chosen TARDIS?
 
@@ -163,7 +166,7 @@ Over the past few months I wanted to explore open-source contributions. So I sta
 
 I've gone through the entire codebase and gained an understanding of its main components. While going through the code, I encountered numerous scientific terms like Monte Carlo Iteration, Plasma State, JBlues etc. I really enjoyed the process of googling these terms and understanding them. The documentation was written in a very clear way. The clarity of explanations in the documentation made it easier to understand the code. These are the two primary things that made me stick to contributing to TARDIS.
 
---- 
+---
 
 ### Why am I the best fit?
 
