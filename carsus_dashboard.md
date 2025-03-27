@@ -70,7 +70,7 @@ The Project - CARSUS Dashboard aims to streamline this workflow by providing a w
 Some of the features of the application include:
 
 1. Filtering data according to atomic numbers, ascending/descending order of wavelengths, line/level ids etc.
-2. Supports uploading and analyzing external atomic datasets.
+2. Supports viewing existing atomic datasets. 
 3. Provides features to compare different atomic datasets, helping researchers validate data across sources.
 4. System is designed to support both legacy atomic files and newer formats, ensuring long-term usability.
 5. Includes thorough documentation and test coverage to maintain ease of use.
@@ -100,7 +100,7 @@ Link to the github repository : [Solution](https://github.com/karthik11135/carsu
 
 Tech Stack : Flask, Jinja2 and TailwindCSS for styling
 
-On the server side, the default atom data is created using only the default options initially. If the user wants to change the data by incorporating other options in NNDC Reader, CMFGEN etc, specific middleware can be created to facilitate custom atomic data creation. On the backend, various endpoints can be created to serve the atomic files data, compare different atomic datasets and also alter the default atomic dataset by sending specific options.
+On the server side, the default atom data is created using the default options. Various endpoints can be created to serve the atomic files data, compare different atomic datasets and also alter the default atomic dataset by sending specific options.
 
 #### Backend Features
 
@@ -109,32 +109,15 @@ On the server side, the default atom data is created using only the default opti
 Python API endpoints:
 | Endpoint Name | HTTP Method | URL Pattern |
 |------------------------------------|------------|---------------------------------------------------------------|
-| Retrieve Lines Data | GET or POST | `/get_lines_data?atomic_file_name=` |
-| Retrieve Levels Data | GET or POST | `/get_levels_data?atomic_file_name=` |
-| Retrieve Collisions Data | GET or POST | `/get_collisions_data?atomic_file_name=` |
-| Retrieve Ionization Energies | GET or POST | `/ionization_energies?atomic_file_name=&atomic_number=&ion_number=&min_energy=` |
-| Retrieve Macro Atom Data | GET or POST | `/macro_atom?atomic_file_name=&atomic_number=&ion_number=&min_transition_probability=` |
-| Retrieve Collisions Data | GET or POST | `/collisions_data?atomic_file_name=&atomic_number=&ion_charge=&min_energy=&max_energy=` |
-| Retrieve Cross Sections Data | GET or POST | `/cross_sections?atomic_file_name=&atomic_number=&ion_charge=&min_energy=` |
+| Retrieve Lines Data | GET | `/get_lines_data?atomic_file_name=` |
+| Retrieve Levels Data | GET | `/get_levels_data?atomic_file_name=` |
+| Retrieve Collisions Data | GET | `/get_collisions_data?atomic_file_name=` |
+| Retrieve Ionization Energies | GET | `/ionization_energies?atomic_file_name=&atomic_number=&ion_number=&min_energy=` |
+| Retrieve Macro Atom Data | GET  | `/macro_atom?atomic_file_name=&atomic_number=&ion_number=&min_transition_probability=` |
+| Retrieve Collisions Data | GET  | `/collisions_data?atomic_file_name=&atomic_number=&ion_charge=&min_energy=&max_energy=` |
+| Retrieve Cross Sections Data | GET | `/cross_sections?atomic_file_name=&atomic_number=&ion_charge=&min_energy=` |
 
 GET: Retrieves data when a valid atomic_file_name is provided.
-
-POST: Allows creating a custom atomic dataset via middleware when options are passed in the request body.
-
-Example of how the body can look like in a POST request :
-
-```
-{
-  "atom": "H-Zn",
-  "gfall_path": "http://example.com",
-  "collisions": true,
-  "priority": 10,
-  "cmfgen_path": "http://example.com",
-  "nndc_remote": true,
-  "temperature_grid": null,
-  "drop_mismatched_labels": true
-}
-```
 
 #### 2. Comparing Atomic Files
 
@@ -147,7 +130,7 @@ Python API endpoints:
 
 #### Frontend Features
 
-- Users can browse pre-loaded atomic datasets.
+- Users can browse specific parts of the atomic datasets.
 
 - Filtering options for atomic numbers, wavelengths, and metadata.
 
@@ -160,7 +143,7 @@ Python API endpoints:
 | Sno | Milestone                                  | Focus Area                                                                                | Deliverables                                                                                                                                                                                  |
 | --- | ------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | Backend Setup                              | Implementing basic API endpoints for fetching atomic data and writing relevant test cases | <ul><li>Working Flask app with GET endpoints (/get_lines_data, /get_collisions_data, /get_levels_data)</li><li>A simple frontend page using Jinja2 templates</li></ul>                        |
-| 2   | Data Fetching and setting up POST requests | Middleware setup for custom data creation and frontend features incorporated              | <ul><li>Fully functional data-fetching API with support for custom atomic data creation</li><li>Frontend with forms and data filtering</li><li>Initial test suite for API endpoints</li></ul> |
+| 2   | Data Fetching and setting up POST requests | Frontend features incorporated       | <ul><li>Fully functional data-fetching API </li><li>Frontend with forms and data filtering</li><li>Initial test suite for API endpoints</li></ul> |
 | 3   | Comparing Atomic Datasets                  | Comparison APIs setup, visualization                                                      | <ul><li>Working comparison APIs with visualization</li><li>Frontend for comparing datasets</li><li>Tests for endpoints</li></ul>                                                              |
 | 4   | Documentation and Testing                  | Docs, tests, final deployment                                                             | <ul><li>Documentation of entire code workflow </li><li>Full test coverage</li><li>Deployable project</li></ul>                                                                                |
 
