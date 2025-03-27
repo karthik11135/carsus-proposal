@@ -4,7 +4,7 @@ GSoC'25 Proposal - TARDIS RT Collaboration
 ![gsoc banner](./GSoC-logo-horizontal.svg) 
 <!-- </div> -->
 
-# CARSUS DASHBOARD ![tardis logo](./ttrail.png)
+# CARSUS DASHBOARD
 
 ## Project Details
 
