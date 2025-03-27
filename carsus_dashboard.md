@@ -1,6 +1,6 @@
 <center>GSoC'25 Proposal - TARDIS RT Collaboration</center>
 
-# <center> CARSUS DASHBOARD </center>
+# <div style="text-align: center"> CARSUS DASHBOARD </div>
 
 ### <u>Project Details</u>   
 Project Title : CARSUS DASHBOARD
@@ -11,9 +11,13 @@ Difficulty : HARD
  
 ### <u>Personal Information</u>   
 Name : Karthik
+
 Email : karthikrk11135@gmail.com
+
 Github id : karthik11135
+
 Brief Summary : A senior year college student from NIT Trichy, India. Interned at Capital One where I've worked on a python team. Over the past few months I've developed an interest towards open source and started looking into open source codebases. I like listening to music, window shopping and planning vacations. 
+
 Resume : [Link to my Resume](https://drive.google.com/file/d/1LTs82Yv-aLM0iVrQHyoPOCQsfxLe_wFC/view?usp=sharing)
 
 ### <u>About the Organisation</u>  
@@ -46,7 +50,7 @@ Carsus enables researchers to:
 <u>Flow Diagram</u>
 ![carsus flow chart](./carsusflow.png)
 
-#### <u>Project Summary</u>  
+### <u>Project Summary</u>  
 The traditional way of getting insights from various atomic datasets is to run the scripts of carsus and look at the  tables. Astrophysicsts and researchers spend time in creating their custom atomic files, comparing two atomic files etc. This manual process is time-consuming and can slow down research progress. 
 
 The Project - CARSUS Dashboard aims to streamline this workflow by providing a web-based application that facilitates numerous use cases. By enabling web access to different datasets, the project reduces the effort required to interact with Carsus, making data analysis faster and more efficient. Web access to various datasets will lessen the amount of time researchers have to deal with carsus to get insights. Built using Django and Jinja2, the application offers multiple API endpoints that allow users to request and visualize insights about atomic data. The dashboard provides an intuitive interface where researchers can interact with datasets
@@ -59,7 +63,7 @@ Some of the features of the application include:
 5. Includes thorough documentation and test coverage to maintain ease of use.
 
 
-#### <u>First Objective Task</u>  
+### <u>First Objective Task</u>  
 Task : Use Jinja2 to generate an HTML Report that investigates an atomic file. Display top 50 rows of levels and lines dataframes from the atomic file for Silicon
 Link to the github repo : [Solution](https://github.com/karthik11135/carsus-dashboard)
 
@@ -71,9 +75,23 @@ Link to the github repo : [Solution](https://github.com/karthik11135/carsus-dash
 
 | Lines | Levels |
 |---------|---------|
-| ![](./linesfirstobj.png) | ![](./levelsfirstobj.png) |
+| ![](./linesweb.png) | ![](./levelsweb.png) |
 
 ### My Approach
+Tech Stack : Django, Jinja2 and TailwindCSS for styling
+
+On the server side, the default atom data is created using only the GFall Reader. If the user wants to change the data by incorporating other options like NNC Reader, CMFGEN etc, specific routes can be created to facilitate custom atomic file creation. On the backend, various endpoints can be created to serve the atomic files data, compare different atomic datasets and also alter the default atomic dataset by sending specific options. 
+
+Python API endpoints: 
+1. Retrieve lines data (/get_lines_data) : GET request
+2. Retrieve levels data (/get_levels_data) : GET request
+3. Retrieve 
+
+
+On the frontend user can select from various pre loaded atomic datasets to view the necessary details. Features like filtering based on atomic numbers, wavelengths etc can be incorporated as well. To compare two different atomic datasets, user can select two existing 
+
+### Milestones
+
 
 ### Why I've chosen TARDIS?
 Over the past few months I wanted to explore open-source contributions. So I started looking for popular repositories on GitHub. That’s when I came across TARDIS.
