@@ -1,6 +1,7 @@
 <center>GSoC'25 Proposal - TARDIS RT Collaboration</center>
 
-# <div style="text-align: center"> CARSUS DASHBOARD </div>
+# <div style="text-align: center"> CARSUS DASHBOARD </div> 
+
 
 ### <u>Project Details</u>   
 Project Title : CARSUS DASHBOARD
@@ -53,7 +54,7 @@ Carsus enables researchers to:
 ### <u>Project Summary</u>  
 The traditional way of getting insights from various atomic datasets is to run the scripts of carsus and look at the  tables. Astrophysicsts and researchers spend time in creating their custom atomic files, comparing two atomic files etc. This manual process is time-consuming and can slow down research progress. 
 
-The Project - CARSUS Dashboard aims to streamline this workflow by providing a web-based application that facilitates numerous use cases. By enabling web access to different datasets, the project reduces the effort required to interact with Carsus, making data analysis faster and more efficient. Web access to various datasets will lessen the amount of time researchers have to deal with carsus to get insights. Built using Django and Jinja2, the application offers multiple API endpoints that allow users to request and visualize insights about atomic data. The dashboard provides an intuitive interface where researchers can interact with datasets
+The Project - CARSUS Dashboard aims to streamline this workflow by providing a web-based application that facilitates numerous use cases. By enabling web access to different datasets, the project reduces the effort required to interact with Carsus, making data analysis faster and more efficient. Web access to various datasets will lessen the amount of time researchers have to deal with carsus to get insights. Built using Flask and Jinja2, the application offers multiple API endpoints that allow users to request and visualize insights about atomic data. The dashboard provides an intuitive interface where researchers can interact with datasets
 
 Some of the features of the application include:
 1. Filtering data according to atomic numbers, ascending/descending order of wavelengths, line/level ids etc. 
@@ -78,15 +79,31 @@ Link to the github repo : [Solution](https://github.com/karthik11135/carsus-dash
 | ![](./linesweb.png) | ![](./levelsweb.png) |
 
 ### My Approach
-Tech Stack : Django, Jinja2 and TailwindCSS for styling
+Tech Stack : Flask, Jinja2 and TailwindCSS for styling
 
-On the server side, the default atom data is created using only the GFall Reader. If the user wants to change the data by incorporating other options like NNC Reader, CMFGEN etc, specific routes can be created to facilitate custom atomic file creation. On the backend, various endpoints can be created to serve the atomic files data, compare different atomic datasets and also alter the default atomic dataset by sending specific options. 
+On the server side, the default atom data is created using only the default options initially. If the user wants to change the data by incorporating other options in NNDC Reader, CMFGEN etc, specific middleware can be created to facilitate custom atomic data creation. On the backend, various endpoints can be created to serve the atomic files data, compare different atomic datasets and also alter the default atomic dataset by sending specific options. 
 
 Python API endpoints: 
-1. Retrieve lines data (/get_lines_data) : GET request
-2. Retrieve levels data (/get_levels_data) : GET request
-3. Retrieve 
+1. Retrieve lines data (/get_lines_data?atomic_file_name=) : GET request
+2. Retrieve levels data (/get_levels_data?atomic_file_name=) : GET request
+3. Retrieve collisions data (/get_collisions_data?atomic_file_name=) : GET request
+4. Retrieve ionization energies (/ionization_energies?atomic_file_name=&atomic_number=&ion_number=&min_energy=) : GET request
+5. Retrieve macro atom data (/macro_atom?atomic_file_name=&atomic_number=&ion_number=&min_transition_probability=) : GET request
+6. Retrieve collisions data (/collisions_data?atomic_file_name=&atomic_number=&ion_charge=&min_energy=&max_energy&) : GET Request 
+7. Retrieve cross sections data (/cross_sections&atomic_file_name=&atomic_number=&ion_charge=&min_energy=) : GET Request
 
+The above endpoints work when the user specifies the atomic file name in the query parameters. However if the user wants to create a custom atomic class object, the user will have to pass the options via body of the request. The above routes can faciliate POST requests where in the body is first passed through a middlware where the instance is created and then fetch data from that instance. 
+
+Example of how the body can look like : {
+    atom: 'H-Zn', 
+    gfall_path: 'http://example.com', 
+    collisions: True,
+    priority : 10,
+    cmfgen_path : 'http://example.com',
+    nndc_remote : True,
+    temperature_grid : None,
+    drop_mismatched_labels: True,
+}
 
 On the frontend user can select from various pre loaded atomic datasets to view the necessary details. Features like filtering based on atomic numbers, wavelengths etc can be incorporated as well. To compare two different atomic datasets, user can select two existing 
 
@@ -101,13 +118,18 @@ I've gone through the entire codebase and gained an understanding of its main co
 ### Why am I the best fit?
 My first internship offer was from a fintech company — Capital One, where I worked as a Software Developer Intern for two months. During this time, I improved my Python programming skills, which is the primary language used in TARDIS. I improved the runtime of our codebase by 40%. After my internship, I discovered TARDIS and began exploring its code by studying the documentation and working through the quickstart tutorials. I've gone threw few issues in the codebase and tried to solve a few of them. 
 
-Here are some of my open PRs
+Main Tardis repo:
 - [add test to line info](https://github.com/tardis-sn/tardis/pull/2947)
 - [from Simulation test for RPacket Plot](https://github.com/tardis-sn/tardis/pull/2945)
-- [Todo: Tests of Composition](https://github.com/tardis-sn/tardis/pull/2944)
-- [Todo: Rename tau to tau_event](https://github.com/tardis-sn/tardis/pull/2931)
+- [TODO: Tests of Composition](https://github.com/tardis-sn/tardis/pull/2944)
+- [TODO: Rename tau to tau_event](https://github.com/tardis-sn/tardis/pull/2931)
 - [Tests for config validator](https://github.com/tardis-sn/tardis/pull/2926)
-- [Todo: Remove ConfigWriterMixin class](https://github.com/tardis-sn/tardis/pull/2926)
+- [refactor: Remove ConfigWriterMixin class](https://github.com/tardis-sn/tardis/pull/2926)
+
+Regression Data repo:
 - [Regression data for Composition](https://github.com/tardis-sn/tardis-regression-data/pull/44)
 
-Apart from this, I actively explore new technologies and work on personal projects to enhance my skills.I believe that I am a perfect fit for this project because I've a good grip on the codebase and I understand what happens under the hood. I also believe that I can hit the ground running from day 0. 
+Carsus repo:
+- [fixes NISTWeightsComp initialization error](https://github.com/tardis-sn/carsus/pull/436)
+
+Apart from this, I actively explore new technologies and work on personal projects to enhance my skills. I believe that I am a perfect fit for this project because I've a good grip on the codebase and I understand what happens under the hood. I also believe that I can hit the ground running from day 0. 
