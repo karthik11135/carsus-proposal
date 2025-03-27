@@ -1,14 +1,20 @@
 <center>GSoC'25 Proposal - TARDIS RT Collaboration</center>
 
+|  ![](./tardislogo.png){width="50%"}
+  | ![gsoclogo](./gsocLogo.png){width="50%"}
+ |
+
 # <div style="text-align: center"> CARSUS DASHBOARD </div> 
 
 
 ### <u>Project Details</u>   
-Project Title : CARSUS DASHBOARD
+- Organization : TARDIS RT Collaboration
+  
+- Project Title : CARSUS DASHBOARD
 
-Mentors : [Josh Shields](https://github.com/jvshields)
+- Mentor : [Josh Shields](https://github.com/jvshields)
 
-Difficulty : HARD
+- Difficulty : HARD
  
 ### <u>Personal Information</u>   
 Name : Karthik
